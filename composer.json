@@ -1,0 +1,25 @@
+{
+    "name": "elfelrandcor/logger",
+    "description": "Logger",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "repositories": [
+      {
+        "type": "git",
+        "url": "https://github.com/elfelrandcor/logger.git"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Juriy Panasevich",
+        "email": "juriy.panasevich@gmail.com"
+      }
+    ],
+    "autoload": {
+      "psr-4": {
+        "JuriyPanasevich\\Logger\\": "src/"
+      }
+    }
+}
