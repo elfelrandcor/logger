@@ -10,7 +10,7 @@ use JuriyPanasevich\Logger\Interfaces\JournalInterface;
 
 abstract class AbstractJournal implements JournalInterface {
 
-    abstract public function setEntity($entityupdate );
+    abstract public function setEntity($entity);
     abstract public function getEntity();
     /** @return AbstractJournalLog */
     abstract public function getJournalLog();
