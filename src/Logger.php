@@ -12,9 +12,7 @@ class Logger {
 
     protected $journal;
 
-    public function __construct($classname) {
-        /** @var AbstractJournal $journal */
-        $journal = new $classname();
+    public function __construct(AbstractJournal $journal) {
         $this->setJournal($journal);
     }
 
