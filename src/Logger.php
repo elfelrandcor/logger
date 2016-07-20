@@ -17,11 +17,11 @@ class Logger {
     }
 
     public function log($message, $code = null) {
-        $this->getJournal()->log($message, $code);
+        return $this->getJournal()->log($message, $code);
     }
 
     public function logError($message) {
-        $this->getJournal()->log($message, AbstractJournalLog::CODE_ERROR);
+        return $this->getJournal()->log($message, AbstractJournalLog::CODE_ERROR);
     }
 
     /**
@@ -31,9 +31,6 @@ class Logger {
         return $this->journal;
     }
 
-    /**
-     * @param AbstractJournal $journal
-     */
     public function setJournal(AbstractJournal $journal) {
         $this->journal = $journal;
     }
