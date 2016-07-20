@@ -15,22 +15,10 @@ abstract class AbstractJournalLog implements JournalLogInterface {
     protected $code;
 
     /**
-     * @return AbstractJournal
-     */
-    abstract public function getJournal();
-    abstract public function setJournal(AbstractJournal $journal);
-
-    public static function getStatusCodeLabels() {
-        return [
-            self::CODE_ERROR => 'Ошибка',
-        ];
-    }
-
-    /**
      * @param AbstractJournal $journal
      * @return AbstractJournalLog
      */
-    public static function createModel(AbstractJournal $journal) {
+    public static function createModel(AbstractJournal $journal){
         $log = new static();
         $log->setJournal($journal);
         return $log;

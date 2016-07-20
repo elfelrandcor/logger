@@ -8,12 +8,15 @@ namespace JuriyPanasevich\Logger\Journal;
 use JuriyPanasevich\Logger\Exceptions\JournalException;
 use JuriyPanasevich\Logger\Interfaces\JournalInterface;
 
+/**
+ * Class AbstractJournal
+ * @package JuriyPanasevich\Logger\Journal
+ * @method AbstractJournalLog getJournalLog()
+ */
 abstract class AbstractJournal implements JournalInterface {
 
     abstract public function setEntity($entity);
     abstract public function getEntity();
-    /** @return AbstractJournalLog */
-    abstract public function getJournalLog();
 
     /**
      * @param $entity
@@ -36,5 +39,6 @@ abstract class AbstractJournal implements JournalInterface {
         if (!$log->save()) {
             throw new JournalException('Failed on journal log save');
         }
+        return $log;
     }
 }

@@ -8,6 +8,9 @@ namespace JuriyPanasevich\Logger\Interfaces;
 
 interface JournalInterface {
 
-    public function find();
+    /**
+     * @return JournalLogInterface
+     */
+    public function getJournalLog();
     public function save();
 }
