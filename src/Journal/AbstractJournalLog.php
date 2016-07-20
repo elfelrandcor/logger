@@ -7,6 +7,11 @@ namespace JuriyPanasevich\Logger\Journal;
 
 use JuriyPanasevich\Logger\Interfaces\JournalLogInterface;
 
+/**
+ * Class AbstractJournalLog
+ * @package JuriyPanasevich\Logger\Journal
+ * @method AbstractJournal getJournal()
+ */
 abstract class AbstractJournalLog implements JournalLogInterface {
 
     const CODE_ERROR = 9000;
